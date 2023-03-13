@@ -3,7 +3,7 @@ type Props = {
   classname?: string;
 };
 
-const Object = ({ text, classname }: Props) => {
+const WaterObject = ({ text, classname }: Props) => {
   return (
     <button
       className={`border w-fit h-fit p-[20px] md:p-14  rounded-full hover:bg-indigo-300 hover:text-gray-700 font-bold text-[20px] ${classname}`}
@@ -13,4 +13,4 @@ const Object = ({ text, classname }: Props) => {
   );
 };
 
-export default Object;
+export default WaterObject;
