@@ -1,9 +1,11 @@
 import Dashboard from './components/Dashboard/Dashboard';
+import Interface from './components/Interface/Interface';
 
 const App = () => {
   return (
-    <div className="text-red-400">
+    <div className="max-w-[800px] mx-auto">
       <Dashboard />
+      <Interface />
     </div>
   );
 };
