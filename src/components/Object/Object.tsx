@@ -5,7 +5,7 @@ type Props = {
 
 const Object = ({ text, classname }: Props) => {
   return (
-    <button className={`border w-[100px] h-[100px] rounded-full hover:bg-slate-300 hover:text-white ${classname}`}>
+    <button className={`border w-[100%] h-[100%] rounded-full hover:bg-slate-300 hover:text-white ${classname}`}>
       {text}
     </button>
   );
