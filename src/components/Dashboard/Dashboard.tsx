@@ -1,7 +1,6 @@
 import { objects } from '../../assets/data';
-import { buildStyles, CircularProgressbar } from 'react-circular-progressbar';
-import 'react-circular-progressbar/dist/styles.css';
 import { ChangeEvent, useState } from 'react';
+import StatusBoard from './StatusBoard/StatusBoard';
 
 interface Object {
   id: number;
@@ -41,32 +40,8 @@ const Dashboard = () => {
 
   return (
     <div className="flex flex-col gap-10 py-5">
-      <h1 className="text-center uppercase border">Sieć wodociągów</h1>
-      <div className="flex flex-col border">
-        <h2 className="self-center">Status Objektów</h2>
-        <div className="flex justify-around">
-          <p>
-            Ilość obiektów:
-            {objectsAmount}
-          </p>
-          {activeObjectsAmount}
-          <CircularProgressbar
-            className="w-20"
-            text={`${(activeObjectsAmount / objectsAmount) * 100}%`}
-            maxValue={objectsAmount}
-            value={activeObjectsAmount}
-            strokeWidth={50}
-            styles={buildStyles({
-              strokeLinecap: 'butt',
-              textColor: 'black',
-              pathColor: 'green',
-              trailColor: 'red',
-              textSize: '20px',
-            })}
-          />
-        </div>
-      </div>
-
+      <h1 className="text-center uppercase tracking-widest font-bold">Sieć wodociągów</h1>
+      <StatusBoard objectsAmount={objectsAmount} activeObjectsAmount={activeObjectsAmount} />
       <div className="flex flex-col">
         <label htmlFor="searchBar" className="self-center">
           Wyszukiwarka:
