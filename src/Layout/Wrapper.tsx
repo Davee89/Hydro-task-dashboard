@@ -5,7 +5,7 @@ type Props = {
 };
 
 const Wrapper = ({ children }: Props) => {
-  return <div className="max-w-[800px] mx-auto p-5 bg-gray-800 rounded-[20px] my-10 text-gray-300">{children}</div>;
+  return <div className="max-w-[800px] mx-auto p-10 bg-gray-800 rounded-[20px] my-10 text-gray-300">{children}</div>;
 };
 
 export default Wrapper;
